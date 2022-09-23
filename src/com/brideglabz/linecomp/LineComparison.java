@@ -3,8 +3,8 @@ package com.brideglabz.linecomp;
 public class LineComparison {
 
 	/*
-	 * UC-2 - check equality of two lines based on the end points, that when two
-	 * lines are the equal.
+	 * UC-3 - compare two lines based on the end points, that I know one line is
+	 * equal, greater or less than the other line.
 	 */
 
 	public static void main(String[] args) {
@@ -30,13 +30,14 @@ public class LineComparison {
 
 		System.out.println("Length of second line : " + length2);
 
-		System.out.println(length1.equals(length2));
+		System.out.println(length1.compareTo(length2));
 
-		if (length1.equals(length2))
-			System.out.println("Both lines are of same length");
+		if (length1.compareTo(length2) == 1)
+			System.out.println("line one is greater than line two");
+		else if (length1.compareTo(length2) == -1)
+			System.out.println("line one is less than line two");
 		else
-			System.out.println("Both the lines are of different length");
-
+			System.out.println("both lines are equal");
 	}
 
 }
